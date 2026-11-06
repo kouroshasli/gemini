@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>کنترل پنل خودکار فعال‌سازی ۲ ساله Google AI Pro (5 TB)</title>
+  <title>Google AI Ultra (5x / 20x) 全自动一条龙控制台</title>
   <style>
     :root {
       --bg: #0b0f19;
@@ -27,7 +27,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
       font-size: 14px;
       line-height: 1.5;
       padding: 18px 24px;
@@ -373,7 +373,6 @@
       border: 1px solid var(--border);
     }
   </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" />
 </head>
 <body>
 
@@ -381,24 +380,24 @@
   <div class="header">
     <div class="header-left">
       <h1>
-        🚀 کنترل پنل خودکار ۲ ساله Google AI Pro (5 TB)
-        <span class="badge-pro">هزینه $0.00 کاملاً رایگان · ۲۴ ماه کامل · لغو خودکار تمدید</span>
+        🚀 Google AI Pro (5 TB) 零成本两年全自动控制台
+        <span class="badge-pro">US$0.00 零消费 · 叠满 24个月 (2028-10) · 自动退订锁死</span>
       </h1>
-      <p>پشتیبانی از انواع اکانت گوگل (ورود خودکار + ایمیل پشتیبان / کد دو مرحله‌ای 2FA)، اجرای زنجیره خودکار: لاگین و احراز هویت ➔ پکیج اول ۱۲ ماهه ($0) ➔ پکیج دوم ۶ ماهه ($0) ➔ پکیج سوم ۶ ماهه تا سقف ۲۴ ماه ($0) ➔ لغو خودکار تمدید در Google Play | کانال کوروش اصلی (@kouroshasli)</p>
+      <p>支持普通白号 / 2FA 号（自动填号密 + 辅助邮箱 / 2FA 验证码），全自动完成：登录验证 ➔ 首层 12M 免费 ($0) ➔ 二层 6M 免费叠加 ($0) ➔ 三层 6M 免费封顶 24个月 ($0) ➔ Play 自动退订锁死</p>
     </div>
     <div class="header-actions">
-      <select id="batchStartStep" title="مرحله شروع برای اجرای گروهی">
-        <option value="1">شروع از مرحله ۱ (فرایند کامل ۲ ساله رایگان + لغو تمدید)</option>
-        <option value="2">شروع از مرحله ۲ (اکانت لاگین است، اعمال ۳ لایه پروموشن رایگان)</option>
-        <option value="3">شروع از مرحله ۳ (اشتراک ۱۲ ماهه فعال است، اعمال لایه‌های بعدی)</option>
-        <option value="4">شروع از مرحله ۴ (اشتراک ۱۸ ماهه فعال است، اعمال سقف ۲۴ ماه + لغو تمدید)</option>
-        <option value="5">شروع از مرحله ۵ (فقط لغو تمدید خودکار در Google Play)</option>
+      <select id="batchStartStep" title="批量执行的起始步骤">
+        <option value="1">从 Step 1 开始 (全流程零成本叠满2年 + 退订)</option>
+        <option value="2">从 Step 2 开始 (已登录，直接跑三层 $0 叠加)</option>
+        <option value="3">从 Step 3 开始 (已有12M，继续跑二层+三层 $0 叠加)</option>
+        <option value="4">从 Step 4 开始 (已有18M，跑最后一层封顶24M + 退订)</option>
+        <option value="5">从 Step 5 开始 (仅去 Google Play 取消自动续订)</option>
       </select>
       <button class="btn-success" id="btnBatchRun" onclick="runBatch()">
-        ▶ اجرای خودکار همه اکانت‌های در انتظار
+        ▶ 一键全自动跑所有待执行账号
       </button>
       <button class="btn-danger" onclick="stopAll()">
-        ⏹ توقف عملیات
+        ⏹ 停止任务
       </button>
     </div>
   </div>
@@ -406,24 +405,24 @@
   <!-- 5-Step Pipeline Overview -->
   <div class="pipeline-bar">
     <div class="pipe-item">
-      <strong>مرحله ۱ · ورود و احراز هویت</strong>
-      <span>ورود خودکار رمز + ایمیل پشتیبان / کد 2FA</span>
+      <strong>Step 1 · 登录与过验证</strong>
+      <span>自动填号密 + 辅助邮箱 / 2FA 动态码</span>
     </div>
     <div class="pipe-item">
-      <strong>مرحله ۲ · پکیج ۱۲ ماهه اول ($0)</strong>
-      <span>۱۲ ماه Pro با ۵ ترابایت + اتصال کارت بدون کسر وجه</span>
+      <strong>Step 2 · 首层 12M 免费 ($0)</strong>
+      <span>12M Pro 5TB + YT 试用 (未绑卡自动内联绑卡)</span>
     </div>
     <div class="pipe-item">
-      <strong>مرحله ۳ · پکیج دوم ۶ ماهه ($0)</strong>
-      <span>هم‌پوشانی و تمدید اشتراک تا ۱۸ ماه</span>
+      <strong>Step 3 · 二层 6M 叠加 ($0)</strong>
+      <span>S25 Pro 6M + YT 试用 Mode 5 顺延至 18个月</span>
     </div>
     <div class="pipe-item">
-      <strong>مرحله ۴ · پکیج سوم ۶ ماهه ($0)</strong>
-      <span>تکمیل و قفل سقف ۲۴ ماهه اشتراک</span>
+      <strong>Step 4 · 三层 6M 封顶 ($0)</strong>
+      <span>Pixel 6M + YT 试用 Mode 5 叠满 24个月 (2028-10)</span>
     </div>
     <div class="pipe-item">
-      <strong>مرحله ۵ · لغو تمدید و قفل نهایی</strong>
-      <span>لغو تمدید در Google Play و ثبت اسکرین‌شات تأیید</span>
+      <strong>Step 5 · 自动退订锁死</strong>
+      <span>Play 商店取消续订，全程 US$0.00 截图存证</span>
     </div>
   </div>
 
@@ -432,47 +431,47 @@
     <!-- Left: Global Plan & Card Config -->
     <div class="card">
       <div class="card-title">
-        <span>⚙️ تنظیمات کارت بانکی، ایالت معاف از مالیات و پلن ۲ ساله</span>
-        <button class="btn-sm" onclick="saveConfig()">💾 ذخیره تنظیمات</button>
+        <span>⚙️ 全局免税区、零成本两年 Pro 方案与银行卡配置</span>
+        <button class="btn-sm" onclick="saveConfig()">💾 保存配置</button>
       </div>
       <div class="form-grid">
         <div class="form-group col-2">
-          <label>🌍 منطقه معاف از مالیات (پیش‌فرض ایالت اورگان آمریکا ۹۷۲۰۱)</label>
+          <label>🌍 目标地区 / 免税邮编区（零成本叠加两年 Pro 固定走美区免税州 97201）</label>
           <select id="cfgTargetRegion" onchange="onRegionChange(this.value)">
-            <option value="US">🇺🇸 ایالت بدون مالیات آمریکا (اورگان 97201 - USD) — الزامی جهت هزینه US$0.00</option>
+            <option value="US">🇺🇸 美国免税区 (US / USD · 俄勒冈 97201) — US$0.00 零成本叠加两年 Pro (5 TB) 必选</option>
           </select>
         </div>
         <div class="form-group col-2">
-          <label>🎯 پلن انتخابی</label>
+          <label>🎯 目标执行方案</label>
           <select id="cfgTargetPlan">
-            <option value="pro_2year_zero">🎁 اشتراک ۲ ساله کامل Google AI Pro (5 TB) — با هزینه صفر $0.00</option>
+            <option value="pro_2year_zero">🎁 零成本叠加两年 Google AI Pro (5 TB) — 全程 US$0.00 叠满 24 个月至 2028-10</option>
           </select>
         </div>
         <div class="form-group col-2">
-          <label>شماره کارت ارزی (Visa / Mastercard - فقط برای اعتبارسنجی 0.00$)</label>
-          <input type="text" id="cfgCardNumber" placeholder="شماره ۱۶ رقمی کارت ویزا یا مسترکارت" />
+          <label>卡号 (支持 Visa / Mastercard 外币卡，仅用于 $0.00 试用验证)</label>
+          <input type="text" id="cfgCardNumber" placeholder="请填写您的 Visa / Mastercard 卡号 (16位)" />
         </div>
         <div class="form-group">
-          <label>تاریخ انقضا (ماه / سال)</label>
+          <label>有效期 (月 / 年)</label>
           <div style="display:flex; gap:6px;">
-            <input type="text" id="cfgExpMonth" placeholder="ماه (مثلاً 08)" style="width:50%;" />
-            <input type="text" id="cfgExpYear" placeholder="سال (مثلاً 29)" style="width:50%;" />
+            <input type="text" id="cfgExpMonth" placeholder="月 (如 08)" style="width:50%;" />
+            <input type="text" id="cfgExpYear" placeholder="年 (如 29)" style="width:50%;" />
           </div>
         </div>
         <div class="form-group">
-          <label>کد امنیتی (CVC)</label>
-          <input type="text" id="cfgCvc" placeholder="کد سه‌رقمی CVC" />
+          <label>安全码 (CVC)</label>
+          <input type="text" id="cfgCvc" placeholder="3位安全码" />
         </div>
         <div class="form-group">
-          <label>نام دارنده کارت (انگلیسی)</label>
-          <input type="text" id="cfgHolder" placeholder="نام انگلیسی (مثلاً KOUROSH ASLI)" />
+          <label>持卡人姓名</label>
+          <input type="text" id="cfgHolder" placeholder="英文姓名 (如 ZHANG SAN)" />
         </div>
         <div class="form-group col-2">
-          <label>آدرس قبض (Address Line 1)</label>
+          <label>账单地址 (Address Line 1)</label>
           <input type="text" id="cfgAddr" placeholder="700 SW 5th Ave" />
         </div>
         <div class="form-group">
-          <label>کد پستی / ایالت معاف از مالیات</label>
+          <label>免税邮编 / 州</label>
           <div style="display:flex; gap:6px;">
             <input type="text" id="cfgZip" placeholder="97201" style="width:45%;" />
             <input type="text" id="cfgProvince" placeholder="OR" style="width:55%;" />
@@ -480,38 +479,38 @@
         </div>
         <div class="form-group col-4">
           <div style="display:flex; justify-content:space-between; align-items:center;">
-            <label>🛡️ قالب پروکسی (اختیاری؛ در صورت خالی بودن از شبکه جاری سیستم استفاده می‌شود)</label>
-            <button type="button" class="btn-sm btn-secondary" onclick="testProxyNow()" id="btnTestProxy">🔍 بررسی اتصال پروکسی</button>
+            <label>🛡️ 全局代理模板（留空默认直接使用本机当前美区网络；如需使用代理可粘贴）</label>
+            <button type="button" class="btn-sm btn-secondary" onclick="testProxyNow()" id="btnTestProxy">🔍 测试代理连通性</button>
           </div>
           <input
             type="text"
             id="cfgProxyTemplate"
-            placeholder="خالی بگذارید تا از شبکه سیستم استفاده شود یا فرمت http://user:pass@host:port"
+            placeholder="留空默认使用本机当前网络 (推荐)，或填入 http://user:pass@host:port"
           />
           <div id="proxyTestResult" style="font-size:12px; color:#34d399; margin-top:4px;">
-            ✅ استفاده پیش‌فرض از شبکه سیستم (کد پستی معاف از مالیات 97201 با هزینه کاملاً صفر)
+            ✅ 默认使用本机美区网络（内联免税邮编 97201，全程三层 US$0.00 零扣费）
           </div>
         </div>
       </div>
       <label class="checkbox-row">
         <input type="checkbox" id="cfgAutoCancel" checked />
-        <span>✅ <strong>محافظت لغو خودکار در مرحله ۵</strong> (پس از تکمیل ۲۴ ماه، بلافاصله در Google Play تمدید خودکار لغو شده تا هیچ هزینه‌ای در آینده کسر نشود)</span>
+        <span>✅ <strong>Step 5 自动取消续订保护</strong>（叠满 24 个月后立即自动前往 Google Play 取消自动续订，锁死 2028 年到期日，全程 US$0.00 零扣费）</span>
       </label>
     </div>
 
     <!-- Right: Bulk Account Import -->
     <div class="card" style="display:flex; flex-direction:column;">
       <div class="card-title">
-        <span>📥 افزودن دسته‌ای اکانت‌های گوگل (شناسایی خودکار ایمیل، پسورد، ایمیل پشتیبان و 2FA)</span>
-        <button class="btn-sm btn-success" onclick="importAccounts()">➕ افزودن اکانت‌ها به لیست</button>
+        <span>📥 批量放号导入区（支持任意分隔符，自动识别辅助邮箱与 2FA 密钥）</span>
+        <button class="btn-sm btn-success" onclick="importAccounts()">➕ 一键导入账号列表</button>
       </div>
       <textarea
         id="importText"
         style="flex:1; width:100%; resize:none; font-family:Consolas,monospace; font-size:12.5px;"
-        placeholder="هر اکانت در یک خط؛ با جداکننده‌های ---- یا / یا | یا فاصله:&#10;ایمیل----رمزعبور----ایمیل‌پشتیبان&#10;ایمیل/رمزعبور/ایمیل‌پشتیبان/کلید2FA&#10;ایمیل----رمزعبور----کلید2FA"
+        placeholder="每行放一个账号，支持 ----、/、—、|、空格 等任意分隔符：&#10;邮箱----密码----辅助邮箱&#10;邮箱/密码/辅助邮箱/2FA密钥&#10;邮箱—密码—辅助邮箱&#10;邮箱----密码----2FA密钥"
       ></textarea>
       <div style="font-size:12px; color:var(--muted); margin-top:8px;">
-        💡 نکته: هم اکانت‌های معمولی با ایمیل پشتیبان و هم اکانت‌های دارای کد 2FA به صورت خودکار پشتیبانی می‌شوند!
+        💡 提示：无 2FA 白号（带辅助邮箱）与 2FA 号均可直接导入一键全自动执行！
       </div>
     </div>
   </div>
@@ -519,21 +518,21 @@
   <!-- Accounts Table Card -->
   <div class="card" style="margin-bottom: 18px;">
     <div class="card-title">
-      <span>📋 صف اکانت‌ها و مانیتورینگ لحظه‌ای وضعیت</span>
-      <span id="summaryStats" style="font-size:12.5px; color:var(--muted); font-weight:normal;">در حال بارگذاری...</span>
+      <span>📋 账号队列与实时进度监控（点击 2FA 动态码可一键复制）</span>
+      <span id="summaryStats" style="font-size:12.5px; color:var(--muted); font-weight:normal;">加载中...</span>
     </div>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th style="width:85px;">ردیف</th>
-            <th style="width:250px;">ایمیل گوگل / رمز / پشتیبان</th>
-            <th style="width:140px;">نوع تایید هویت / 2FA</th>
-            <th style="width:110px;">وضعیت</th>
-            <th style="width:320px;">پیشرفت مراحل ۵ گانه</th>
-            <th style="width:155px;">تاریخ انقضا</th>
-            <th style="width:75px;">تصویر</th>
-            <th>عملیات و مدیریت</th>
+            <th style="width:85px;">编号</th>
+            <th style="width:250px;">Google 邮箱 / 密码 / 辅助邮箱</th>
+            <th style="width:140px;">验证方式 / 2FA</th>
+            <th style="width:110px;">状态</th>
+            <th style="width:320px;">5 步零成本两年 Pro 流水线进度</th>
+            <th style="width:155px;">当前到期日</th>
+            <th style="width:75px;">核验图</th>
+            <th>单号控制操作</th>
           </tr>
         </thead>
         <tbody id="accountsTbody"></tbody>
@@ -544,8 +543,8 @@
   <!-- Live Logs Terminal -->
   <div class="card">
     <div class="card-title">
-      <span>🖥️ لاگ زنده اجرای خودکار سیستم (Playwright Engine)</span>
-      <span style="font-size:12px; color:var(--muted); font-weight:normal;">در صورت نمایش کپچای گوگل، پنجره مرورگر ظاهر می‌شود تا تیک را بزنید و ادامه خودکار انجام شود</span>
+      <span>🖥️ 实时自动化执行日志 (Playwright CDP + Ngbm Interceptor)</span>
+      <span style="font-size:12px; color:var(--muted); font-weight:normal;">遇到绑卡 reCAPTCHA 人机验证时会自动弹窗提醒您点一下复选框，点完自动继续</span>
     </div>
     <div class="terminal" id="logTerminal"></div>
   </div>
@@ -554,8 +553,8 @@
   <div class="modal-backdrop" id="imgModal" onclick="closeModal()">
     <div class="modal-box" onclick="event.stopPropagation()">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-        <strong id="modalTitle">پیش‌نمایش اسکرین‌شات تأییدیه</strong>
-        <button class="btn-sm btn-secondary" onclick="closeModal()">✖ بستن</button>
+        <strong id="modalTitle">核验截图预览</strong>
+        <button class="btn-sm btn-secondary" onclick="closeModal()">✖ 关闭</button>
       </div>
       <img id="modalImg" src="" alt="screenshot" />
     </div>
@@ -596,7 +595,7 @@
         const done = (data.accounts || []).filter(a => a.status === 'completed').length;
         const running = data.active_count || 0;
         document.getElementById('summaryStats').textContent =
-          `تعداد کل: ${total} | انجام شده: ${done} | در حال اجرا: ${running}`;
+          `共 ${total} 个账号 | 已完成: ${done} | 运行中: ${running}`;
       } catch (e) {
         console.error('State poll error:', e);
       }
@@ -604,12 +603,12 @@
 
     function statusBadgeHtml(status) {
       const map = {
-        pending: ['status-pending', '⏳ در انتظار'],
-        running: ['status-running', '⚡ در حال اجرا'],
-        waiting_human: ['status-waiting_human', '🖐️ منتظر تأیید کپچا'],
-        completed: ['status-completed', '✅ تکمیل شد'],
-        error: ['status-error', '❌ خطا / توقف'],
-        stopped: ['status-pending', '⏹ متوقف شد']
+        pending: ['status-pending', '⏳ 待执行'],
+        running: ['status-running', '⚡ 执行中'],
+        waiting_human: ['status-waiting_human', '🖐️ 等点人机验证'],
+        completed: ['status-completed', '✅ 已完成'],
+        error: ['status-error', '❌ 异常中断'],
+        stopped: ['status-pending', '⏹ 已停止']
       };
       const [cls, label] = map[status] || ['status-pending', status];
       return `<span class="status-badge ${cls}">${label}</span>`;
@@ -632,15 +631,15 @@
       tbody.innerHTML = accounts.map(acc => {
         const savedStart = selectedStartSteps[acc.id] || 1;
         const shotBtn = acc.last_screenshot
-          ? `<button class="btn-sm btn-secondary" onclick="showScreenshot('${acc.id}', '${acc.last_screenshot}')">🖼 مشاهده</button>`
+          ? `<button class="btn-sm btn-secondary" onclick="showScreenshot('${acc.id}', '${acc.last_screenshot}')">🖼 查看</button>`
           : `<span style="color:var(--muted);font-size:12px;">-</span>`;
 
         const totpHtml = (acc.totp_secret && acc.totp_now && acc.totp_now !== '------')
-          ? `<div class="totp-pill" onclick="copyText('${acc.totp_now}')" title="کلیک برای کپی کد ۶ رقمی 2FA">
+          ? `<div class="totp-pill" onclick="copyText('${acc.totp_now}')" title="点击复制 6 位动态验证码">
                <span>${acc.totp_now}</span>
                <span class="totp-rem">${acc.totp_rem}s</span>
              </div>`
-          : `<span style="font-size:12px; color:#34d399;">📧 ایمیل پشتیبان</span>`;
+          : `<span style="font-size:12px; color:#34d399;">📧 辅助邮箱验证</span>`;
 
         return `
           <tr>
@@ -648,9 +647,9 @@
             <td>
               <div style="font-weight:600; color:#f1f5f9;">${acc.email}</div>
               <div style="font-size:11.5px; color:var(--muted); font-family:Consolas,monospace;">
-                رمز: ${acc.password}
-                ${acc.recovery_email ? `<br/>پشتیبان: ${acc.recovery_email}` : ''}
-                ${acc.ip_info ? `<span style="margin-left:6px; color:#38bdf8;">[${acc.ip_info}]</span>` : (acc.proxy ? `<span style="margin-left:6px; color:#a78bfa;">[پروکسی اختصاصی]</span>` : '')}
+                密码: ${acc.password}
+                ${acc.recovery_email ? `<br/>辅助: ${acc.recovery_email}` : ''}
+                ${acc.ip_info ? `<span style="margin-left:6px; color:#38bdf8;">[${acc.ip_info}]</span>` : (acc.proxy ? `<span style="margin-left:6px; color:#a78bfa;">[独立代理]</span>` : '')}
               </div>
             </td>
             <td>${totpHtml}</td>
@@ -671,37 +670,37 @@
                   style="padding:4px 6px; font-size:12px;"
                   onchange="selectedStartSteps['${acc.id}'] = parseInt(this.value)"
                 >
-                  <option value="1" ${savedStart === 1 ? 'selected' : ''}>از مرحله ۱ (کامل)</option>
-                  <option value="2" ${savedStart === 2 ? 'selected' : ''}>از مرحله ۲ (۱۲ ماه اول)</option>
-                  <option value="3" ${savedStart === 3 ? 'selected' : ''}>از مرحله ۳ (۶ ماه دوم)</option>
-                  <option value="4" ${savedStart === 4 ? 'selected' : ''}>از مرحله ۴ (سقف ۲۴ ماه)</option>
-                  <option value="5" ${savedStart === 5 ? 'selected' : ''}>از مرحله ۵ (لغو تمدید)</option>
+                  <option value="1" ${savedStart === 1 ? 'selected' : ''}>从 Step 1 全跑</option>
+                  <option value="2" ${savedStart === 2 ? 'selected' : ''}>从 Step 2 首层12M($0)</option>
+                  <option value="3" ${savedStart === 3 ? 'selected' : ''}>从 Step 3 二层6M($0)</option>
+                  <option value="4" ${savedStart === 4 ? 'selected' : ''}>从 Step 4 三层封顶($0)</option>
+                  <option value="5" ${savedStart === 5 ? 'selected' : ''}>从 Step 5 退订锁死</option>
                 </select>
                 <button
                   class="btn-sm ${acc.is_running ? 'btn-danger' : 'btn-success'}"
                   onclick="${acc.is_running ? `stopSingle('${acc.id}')` : `runSingle('${acc.id}')`}"
                 >
-                  ${acc.is_running ? '⏹ توقف' : '▶ شروع اجرا'}
+                  ${acc.is_running ? '⏹ 停止' : '▶ 启动一条龙'}
                 </button>
                 <button
                   class="btn-sm ${openedBrowserMap[acc.id] ? 'btn-success' : 'btn-secondary'}"
                   onclick="openBrowser('${acc.id}')"
-                  title="باز کردن دستی پنجره مرورگر کروم برای این اکانت"
+                  title="手动打开该账号的独立 Chrome 窗口"
                 >
-                  ${openedBrowserMap[acc.id] ? '✅ باز شد' : '🌐 مرورگر'}
+                  ${openedBrowserMap[acc.id] ? '✅ 已打开' : '🌐 浏览器'}
                 </button>
-                <button class="btn-sm btn-secondary" onclick="resetAccount('${acc.id}')" title="بازنشانی وضعیت به در انتظار">
+                <button class="btn-sm btn-secondary" onclick="resetAccount('${acc.id}')" title="重置状态为待执行">
                   🔄
                 </button>
-                <button class="btn-sm btn-secondary" onclick="deleteAccount('${acc.id}')" title="حذف این اکانت از لیست">
+                <button class="btn-sm btn-secondary" onclick="deleteAccount('${acc.id}')" title="移除此账号">
                   🗑️
                 </button>
                 <button
                   class="btn-sm ${copiedAccountMap[acc.id] ? 'btn-success' : 'btn-secondary'}"
                   onclick="copyAccountFull('${acc.id}', '${acc.email}', '${acc.password}', '${acc.totp_secret || acc.recovery_email || ''}')"
-                  title="کپی مشخصات اکانت"
+                  title="一键复制账号信息"
                 >
-                  ${copiedAccountMap[acc.id] ? '✅ کپی شد' : '📋 کپی'}
+                  ${copiedAccountMap[acc.id] ? '✅ 已复制' : '📋 复制'}
                 </button>
               </div>
             </td>
@@ -715,8 +714,8 @@
       const isAtBottom = term.scrollHeight - term.clientHeight <= term.scrollTop + 40;
       term.innerHTML = logs.map(line => {
         let cls = 'log-line';
-        if (line.includes('⚠️') || line.includes('کپچا')) cls += ' log-warn';
-        else if (line.includes('❌') || line.includes('خطا')) cls += ' log-err';
+        if (line.includes('⚠️') || line.includes('人机验证')) cls += ' log-warn';
+        else if (line.includes('❌') || line.includes('异常')) cls += ' log-err';
         else if (line.includes('✅') || line.includes('🎉')) cls += ' log-ok';
         return `<div class="${cls}">${escapeHtml(line)}</div>`;
       }).join('');
@@ -739,9 +738,9 @@
       const btn = document.getElementById('btnTestProxy');
       const resBox = document.getElementById('proxyTestResult');
       btn.disabled = true;
-      btn.textContent = '⏳ در حال تست اتصال...';
+      btn.textContent = '⏳ 正在检测出口 IP...';
       resBox.style.color = '#38bdf8';
-      resBox.textContent = 'در حال بررسی اتصال به سرور...';
+      resBox.textContent = '正在测试代理连通性...';
       try {
         const region = document.getElementById('cfgTargetRegion').value;
         const tpl = document.getElementById('cfgProxyTemplate').value.trim();
@@ -760,10 +759,10 @@
         }
       } catch (e) {
         resBox.style.color = '#f87171';
-        resBox.textContent = '❌ خطا در اتصال: ' + e;
+        resBox.textContent = '❌ 请求异常: ' + e;
       } finally {
         btn.disabled = false;
-        btn.textContent = '🔍 بررسی اتصال پروکسی';
+        btn.textContent = '🔍 测试代理连通性';
         fetchState();
       }
     }
@@ -797,7 +796,7 @@
 
     async function importAccounts() {
       const raw = document.getElementById('importText').value.trim();
-      if (!raw) return alert('لطفاً ابتدا اکانت‌های مورد نظر را در کادر متنی وارد کنید!');
+      if (!raw) return alert('请先在文本框中粘贴要导入的账号！');
       const res = await fetch('/api/accounts/import', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -817,7 +816,7 @@
       const expY = document.getElementById('cfgExpYear').value.trim();
       const cvc = document.getElementById('cfgCvc').value.trim();
       if (num.length < 12 || !expM || !expY || !cvc) {
-        alert('⚠️ لطفاً ابتدا در پنل سمت چپ اطلاعات کارت بانکی (شماره کارت، انقضا و CVC) را ذخیره کنید!');
+        alert('⚠️ 请先在左侧【全局配置与内联免税绑卡】中填写您的支付卡信息（卡号、有效期月/年、CVC 安全码）后再开始执行！');
         document.getElementById('cfgCardNumber').focus();
         return false;
       }
@@ -835,7 +834,7 @@
       });
       if (!res.ok) {
         const err = await res.json();
-        alert(err.detail || 'خطا در شروع فرایند');
+        alert(err.detail || '启动失败');
       }
       fetchState();
     }
@@ -851,7 +850,7 @@
       });
       if (!res.ok) {
         const err = await res.json();
-        alert(err.detail || 'خطا در شروع اجرای گروهی');
+        alert(err.detail || '批量启动失败');
       }
       fetchState();
     }
@@ -894,7 +893,7 @@
     }
 
     async function deleteAccount(accountId) {
-      if (!confirm(`آیا از حذف اکانت ${accountId} اطمینان دارید؟`)) return;
+      if (!confirm(`确定要从列表中移除账号 ${accountId} 吗？`)) return;
       await fetch('/api/accounts/delete', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -904,7 +903,7 @@
     }
 
     function showScreenshot(accId, filename) {
-      document.getElementById('modalTitle').textContent = `اسکرین‌شات تأییدیه ${accId} (${filename})`;
+      document.getElementById('modalTitle').textContent = `${accId} 最新核验截图 (${filename})`;
       document.getElementById('modalImg').src = `/screenshots/${filename}?t=${Date.now()}`;
       document.getElementById('imgModal').style.display = 'flex';
     }
