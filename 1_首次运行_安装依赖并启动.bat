@@ -1,15 +1,35 @@
-@echo off
-chcp 936 >nul
-title Google AI Pro (5 TB) Áã³É±¾Á½ÄêÈ«×Ô¶¯¿ØÖÆÌ¨ - »·¾³°²×°ÓëÆô¶¯
-cd /d "%~dp0"
-echo ======================================================================
-echo   ÕıÔÚ¼ì²é²¢°²×° Python ÒÀÀµ°ü (fastapi, uvicorn, playwright)...
-echo ======================================================================
-python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-echo.
-echo ======================================================================
-echo   ÕıÔÚÆô¶¯ Web ¿ØÖÆÌ¨ (http://127.0.0.1:8765) ...
-echo ======================================================================
-start "" "http://127.0.0.1:8765"
-python app.py
-pause
+@echo off
+chcp 65001 >nul
+title Google AI Pro (5 TB) é›¶æˆæœ¬ä¸¤å¹´å…¨è‡ªåŠ¨æ§åˆ¶å° - ç¯å¢ƒå®‰è£…ä¸å¯åŠ¨
+cd /d "%~dp0"
+
+:: Auto-detect proper Python with pip
+set "PY_CMD="
+py -3 --version >nul 2>&1 && set "PY_CMD=py -3"
+if not defined PY_CMD (
+    for /d %%i in ("%LOCALAPPDATA%\Programs\Python\Python3*") do (
+        if exist "%%i\python.exe" set "PY_CMD="%%i\python.exe""
+    )
+)
+if not defined PY_CMD (
+    python --version >nul 2>&1 && set "PY_CMD=python"
+)
+if not defined PY_CMD (
+    echo [ERROR] Python not found! Please install Python 3.10+ from https://python.org
+    pause
+    exit /b 1
+)
+
+echo ======================================================================
+echo   æ­£åœ¨æ£€æŸ¥å¹¶å®‰è£… Python ä¾èµ–åŒ… (fastapi, uvicorn, playwright)...
+echo   Python: %PY_CMD%
+echo ======================================================================
+%PY_CMD% -m pip install -r requirements.txt
+%PY_CMD% -m playwright install chromium
+echo.
+echo ======================================================================
+echo   æ­£åœ¨å¯åŠ¨ Web æ§åˆ¶å° (http://127.0.0.1:8765) ...
+echo ======================================================================
+start "" "http://127.0.0.1:8765"
+%PY_CMD% app.py
+pause

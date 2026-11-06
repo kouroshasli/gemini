@@ -1,11 +1,29 @@
-@echo off
-chcp 936 >nul
-title Google AI Pro (5 TB) Áã³É±¾Á½ÄêÈ«×Ô¶¯¿ØÖÆÌ¨
-cd /d "%~dp0"
-echo ======================================================================
-echo   ÕıÔÚÆô¶¯ Google AI Pro (5 TB) Áã³É±¾Á½ÄêÈ«×Ô¶¯¿ØÖÆÌ¨...
-echo   ¿ØÖÆÌ¨µØÖ·: http://127.0.0.1:8765
-echo ======================================================================
-start "" "http://127.0.0.1:8765"
-python app.py
-pause
+@echo off
+chcp 65001 >nul
+title Google AI Pro (5 TB) é›¶æˆæœ¬ä¸¤å¹´å…¨è‡ªåŠ¨æ§åˆ¶å°
+cd /d "%~dp0"
+
+:: Auto-detect proper Python
+set "PY_CMD="
+py -3 --version >nul 2>&1 && set "PY_CMD=py -3"
+if not defined PY_CMD (
+    for /d %%i in ("%LOCALAPPDATA%\Programs\Python\Python3*") do (
+        if exist "%%i\python.exe" set "PY_CMD="%%i\python.exe""
+    )
+)
+if not defined PY_CMD (
+    python --version >nul 2>&1 && set "PY_CMD=python"
+)
+if not defined PY_CMD (
+    echo [ERROR] Python not found! Please install Python 3.10+ from https://python.org
+    pause
+    exit /b 1
+)
+
+echo ======================================================================
+echo   æ­£åœ¨å¯åŠ¨ Google AI Pro (5 TB) é›¶æˆæœ¬ä¸¤å¹´å…¨è‡ªåŠ¨æ§åˆ¶å°...
+echo   æ§åˆ¶å°åœ°å€: http://127.0.0.1:8765
+echo ======================================================================
+start "" "http://127.0.0.1:8765"
+%PY_CMD% app.py
+pause
